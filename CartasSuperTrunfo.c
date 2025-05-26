@@ -1,5 +1,5 @@
 #include <stdio.h>
-//novo commit
+
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
@@ -14,7 +14,7 @@ int main() {
     char codigo [5];
     char nomeCid [30];
     int populacao, Pturisticos;
-    float areaKm, pib;
+    float areaKm, pib, densiPop, PIBc;
 
     // perguntas para cadastro
     printf(" Estado : \n");
@@ -35,9 +35,12 @@ int main() {
     printf("PIB : \n");
     scanf("%f",&pib );
 
-
     printf("Pontos turisticos : \n");
     scanf("%d", &Pturisticos);
+
+    densiPop = populacao/areaKm; // calculo da densidade ppulacional
+    PIBc = (float) pib/populacao; // calculo do PIB per capita com casting
+    
 
 
 // print dos resultados
@@ -46,6 +49,8 @@ int main() {
    printf("Nome da cidade : %s \n População : %d \n",nomeCid, populacao );
    printf("Àrea : %.2f km \n PIB : %.2f \n", areaKm, pib);
    printf("Pontos turisticos : %d \n", Pturisticos);
+   printf("Densidade populacional : %.2f \n", densiPop);
+   printf("PIB per capita : %.2f \n", PIBc);
    getchar();
 
 
@@ -73,6 +78,9 @@ int main() {
     printf("Pontos turisticos : \n");
     scanf("%d", &Pturisticos);
 
+    densiPop = populacao/areaKm;
+    PIBc = (float) pib/populacao;
+
 
 // print dos resultados
 
@@ -80,7 +88,8 @@ int main() {
    printf("Nome da cidade : %s \n População : %d \n",nomeCid, populacao );
    printf("Àrea : %.2f km \n PIB : %.2f \n", areaKm, pib);
    printf("Pontos turisticos : %d \n", Pturisticos);
-
+   printf("Densidade populacional : %.2f \n", densiPop);
+   printf("PIB per capita : %.2f \n", PIBc);
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
